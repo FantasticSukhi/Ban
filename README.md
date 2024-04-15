@@ -1,8 +1,8 @@
-# ™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍 Ban All Bot
+# ™°‌ 🫧 MAMBA Ban All Bot
 
-![™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍](https://graph.org/file/b0825ba6490d2aa6a6afd.jpg) <!-- Add your bot's logo here -->
+![™°‌ 🫧 MAMBA](https://te.legra.ph/file/1845a75449bbbc2e8f9f7.jpg) <!-- Add your bot's logo here -->
 
-Welcome to the Telegram Ban All Bot, created by @oxyhu. This bot is designed to streamline administrative tasks in your Telegram group, making it easier to manage your community.
+Welcome to the Telegram Ban All Bot, created by @SECRET_HU_YAAR. This bot is designed to streamline administrative tasks in your Telegram group, making it easier to manage your community.
 
 ## Features
 
@@ -34,14 +34,14 @@ Once deployed, you can harness the power of the Telegram Ban All Bot in your gro
 
 ## Support and Contributions
 
-If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request on [GitHub](https://github.com/PRADHAN474/BANALLBOT). Your contributions are appreciated!
+If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request on [GitHub](https://github.com/FantasticSukhi/Ban). Your contributions are appreciated!
 
 ## Telegram Support
 
-Have questions or need assistance? Join our [Support Group](https://t.me/BWANDARLOK) for help!
+Have questions or need assistance? Join our [Support](https://t.me/SECRET_HU_YAAR) for help!
 
 ## Credits
 
-This bot was brought to you by @oxyhu. Thank you for using it!
+This bot was brought to you by @SECRET_HU_YAAR. Thank you for using it!
 
 Enjoy using the Telegram Ban All Bot and make group management easier than ever!
