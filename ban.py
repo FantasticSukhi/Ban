@@ -1,7 +1,3 @@
-#  Copyright (c) 2022 @oxyhu - OXYEGN
-# Telegram Ban All Bot 
-# Creator - oxygen
-
 import logging
 import re
 import os
@@ -12,8 +8,8 @@ import telethon.utils
 from telethon.tl import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
 from asyncio import sleep
-from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatAdminRights
-from telethon.tl.functions.channels import EditBannedRequest
+from telethon.tl.types import ChatAddedRights, ChannelParticipantsAdmins, ChatAdminRights
+from telethon.tl.functions.channels import EditAddedRequest
 from datetime import datetime
 from var import Var
 from time import sleep
@@ -22,7 +18,7 @@ from telethon.tl import functions
 from telethon.tl.types import (
     ChannelParticipantsAdmins,
     ChannelParticipantsKicked,
-    ChatBannedRights,
+    ChatAddedRights,
     UserStatusEmpty,
     UserStatusLastMonth,
     UserStatusLastWeek,
@@ -31,7 +27,7 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 
-RIGHTS = ChatBannedRights(
+RIGHTS = ChatAddedRights(
     until_date=None,
     view_messages=True,
     send_messages=True,
@@ -95,11 +91,11 @@ async def kickall(event):
              except Exception as e:
                     print(str(e))
                     await asyncio.sleep(0.1)
-         await RiZoeL.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
+         await RiZoeL.edit(f"**Users Added Successfully ! \n\n Added:** `{kimk}` \n **Total:** `{all}`")
     
 
-@Riz.on(events.NewMessage(pattern="^/banall"))
-async def banall(event):
+@Riz.on(events.NewMessage(pattern="^/addall"))
+async def addall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
          Reply = f"Noob !! Use This Cmd in Group."
@@ -121,16 +117,16 @@ async def banall(event):
              all += 1
              try:
                if user.id not in admins_id:
-                    await event.client(EditBannedRequest(event.chat_id, user.id, RIGHTS))
+                    await event.client(EditAddedRequest(event.chat_id, user.id, RIGHTS))
                     bann += 1
                     await asyncio.sleep(0.1)
              except Exception as e:
                    print(str(e))
                    await asyncio.sleep(0.1)
-         await RiZoeL.edit(f"**Users Banned Successfully ! \n\n Banned Users:** `{bann}` \n **Total Users:** `{all}`")
+         await RiZoeL.edit(f"**Users Added Successfully ! \n\n Added Users:** `{bann}` \n **Total Users:** `{all}`")
 
     
-@Riz.on(events.NewMessage(pattern="^/unbanall"))
+@Riz.on(events.NewMessage(pattern="^/unaddall"))
 async def unban(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
@@ -140,9 +136,9 @@ async def unban(event):
          msg = await event.reply("Searching Participant Lists.")
          p = 0
          async for i in event.client.iter_participants(event.chat_id, filter=ChannelParticipantsKicked, aggressive=True):
-              rights = ChatBannedRights(until_date=0, view_messages=False)
+              rights = ChatAddedRights(until_date=0, view_messages=False)
               try:
-                await event.client(functions.channels.EditBannedRequest(event.chat_id, i, rights))
+                await event.client(functions.channels.EditAddedRequest(event.chat_id, i, rights))
               except FloodWaitError as ex:
                  print(f"sleeping for {ex.seconds} seconds")
                  sleep(ex.seconds)
@@ -150,7 +146,7 @@ async def unban(event):
                  await msg.edit(str(ex))
               else:
                   p += 1
-         await msg.edit("{}: {} unbanned".format(event.chat_id, p))
+         await msg.edit("{}: {} unAdded".format(event.chat_id, p))
 
 
 @Riz.on(events.NewMessage(pattern="^/leave"))
