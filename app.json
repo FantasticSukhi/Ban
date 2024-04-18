@@ -6,22 +6,22 @@
    "image": "heroku/python",
    "env": {
       "API_ID": {
-        "description": "",
+        "description": "Add here your API_ID from telegram.org",
         "value": "123456789",
         "required": true
       },
       "API_HASH": {
-        "description": "",
+        "description": "Add here your API_HASH from telegram.org",
         "value": "123456789:abcdefghijklmnopqrstuvwxyz",
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "",
-        "value": "",
+        "description": "Add here your bot token from @BotFather",
+        "value": "6753964678:AAEE0_DsVfIt6IBO6xMq4FIGKekSHfp-IBs",
         "required": true
       },      
       "SUDO": {
-            "description": "",
+            "description": "Add here sudo user id taken from this command using in @missrose_bot",
             "value": "",
             "required": true  
       }
