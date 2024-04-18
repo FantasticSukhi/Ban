@@ -7,12 +7,12 @@
    "env": {
       "API_ID": {
         "description": "Add here your API_ID from telegram.org",
-        "value": "123456789",
+        "value": "22245596",
         "required": true
       },
       "API_HASH": {
         "description": "Add here your API_HASH from telegram.org",
-        "value": "123456789:abcdefghijklmnopqrstuvwxyz",
+        "value": "d6a94c9059aac82d48e516cde7205b27",
         "required": true
       },
       "BOT_TOKEN": {
@@ -22,7 +22,7 @@
       },      
       "SUDO": {
             "description": "Add here sudo user id taken from this command using in @missrose_bot",
-            "value": "",
+            "value": "7182127006",
             "required": true  
       }
    },
